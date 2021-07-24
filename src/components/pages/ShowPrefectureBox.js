@@ -4,20 +4,19 @@ import React, {useState, useEffect} from "react";
 import {prefecturesList} from "../../prefectureData";
 import {PrefectureAndButton} from "../molecules/PrefectureAndButton";
 
-export const ShowPrefectureBox = () => {
-	//const [prefectures, setPrefectures] = useState([]);
+export const ShowPrefectureBox = (props) => {
+	const {prefectures, setPrefectures} = props;
 	//APIから都道府県一覧を取得する
-	//useEffect(() => {
-	//	axios
-	//	.get("https://opendata.resas-portal.go.jp/api/v1/prefectures", {
-	//		headers: { "X-API-KEY": '7SSvELiPcZD4g8iOJTQLNUZRBiPa2gk31mtavV0H' },
-	//	})
-	//	.then((results) => {
-	//		setPrefectures(results.data.result);
-	//	})
-	//	.catch((error) => {});
-	//}, [])
-	const prefectures = prefecturesList.result;
+	useEffect(() => {
+		axios
+		.get("https://opendata.resas-portal.go.jp/api/v1/prefectures", {
+			headers: { "X-API-KEY": '7SSvELiPcZD4g8iOJTQLNUZRBiPa2gk31mtavV0H' },
+		})
+		.then((results) => {
+			setPrefectures(results.data.result);
+		})
+		.catch((error) => {});
+	}, [])
 
 	return (
 		<>
