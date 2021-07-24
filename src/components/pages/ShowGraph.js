@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 
-import {Graph} from "../organisms/layout/Graph"
+import {Graph} from "../organisms/Graph"
 
 export const ShowGraph = (props) => {
 	const {index} = props;

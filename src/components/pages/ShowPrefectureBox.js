@@ -2,9 +2,6 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 
-import {prefecturesList} from "../../prefectureData";
-import {PrefectureAndButton} from "../molecules/PrefectureAndButton";
-
 export const ShowPrefectureBox = (props) => {
 	const {prefectures, setPrefectures, setIndex} = props;
 
@@ -22,20 +19,17 @@ export const ShowPrefectureBox = (props) => {
 
 	return (
 		<>
-			<p>都道府県</p>
-			<div>
-				{prefectures.map((prefecture, index) => {
-					const onChangeIndex = () => {
-						setIndex(index);
-					}
-					return (
-						<Sdiv name="form" >
-							<input type="radio" onChange={onChangeIndex} name="checked" />
-							<Sspan>{prefecture.prefName}</Sspan>
-						</Sdiv>
-					)
-				})}
-			</div>
+			{prefectures.map((prefecture, index) => {
+				const onChangeIndex = () => {
+					setIndex(index);
+				}
+				return (
+					<Sdiv name="form" >
+						<input type="radio" onChange={onChangeIndex} name="checked" />
+						<Sspan>{prefecture.prefName}</Sspan>
+					</Sdiv>
+				)
+			})}
 		</>
 	)
 }
