@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {apikey} from "../../APIkey";
 
 import {Graph} from "../organisms/Graph"
 
@@ -13,7 +14,7 @@ export const ShowGraph = (props) => {
 			"https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?prefCode=" +
 			String(index),
 			{
-				headers: { "X-API-KEY": '7SSvELiPcZD4g8iOJTQLNUZRBiPa2gk31mtavV0H' },
+				headers: { "X-API-KEY": apikey },
 			}
 		)
 		.then((results) => {
