@@ -4,7 +4,7 @@ import axios from "axios";
 import {Graph} from "../organisms/layout/Graph"
 
 export const ShowGraph = (props) => {
-	const {prefectures} = props;
+	const {prefectures, setPrefectures, index, setIndex} = props;
 	const [population, setpopulation] = useState(null);
 	let series = [];
 	// APIから人口の情報を取得する
@@ -12,7 +12,7 @@ export const ShowGraph = (props) => {
 		axios
 		.get(
 			"https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?prefCode=" +
-			String("1"),
+			String(index),
 			{
 				headers: { "X-API-KEY": '7SSvELiPcZD4g8iOJTQLNUZRBiPa2gk31mtavV0H' },
 			}
@@ -23,7 +23,7 @@ export const ShowGraph = (props) => {
 		.catch((error) => {
 			return;
 		});
-	}, [])
+	}, [index])
 	const data = population;
 	const demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
 

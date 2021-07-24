@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const PrefectureAndButton = (props) => {
-	const {prefecture} = props;
+	const {prefecture, index} = props;
 	return (
 		<>
 		<Sdiv>
-			<input type="checkbox" />
+			<input type="checkbox" id={index} />
 			<Sspan>{prefecture.prefName}</Sspan>
 		</Sdiv>
 		</>

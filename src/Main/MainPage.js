@@ -5,11 +5,22 @@ import {Header} from "../components/organisms/layout/Header";
 
 export const MainPage = () => {
 	const [prefectures, setPrefectures] = useState([]);
+	const [index, setIndex] = useState(null);
 	return (
 		<>
 			<Header />
-			<ShowPrefectureBox prefectures={prefectures} setPrefectures={setPrefectures} />
-			<ShowGraph prefectures={prefectures} />
+			<ShowPrefectureBox
+				prefectures={prefectures}
+				setPrefectures={setPrefectures}
+				index={index}
+				setIndex={setIndex}
+			/>
+			<ShowGraph
+				prefectures={prefectures}
+				setPrefectures={setPrefectures}
+				index={index}
+				setIndex={setIndex}
+			/>
 		</>
 	)
 }
