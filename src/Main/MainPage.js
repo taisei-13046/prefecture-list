@@ -16,10 +16,7 @@ export const MainPage = () => {
 				setIndex={setIndex}
 			/>
 			<ShowGraph
-				prefectures={prefectures}
-				setPrefectures={setPrefectures}
 				index={index}
-				setIndex={setIndex}
 			/>
 		</>
 	)

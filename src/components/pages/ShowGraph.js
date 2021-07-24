@@ -4,9 +4,8 @@ import axios from "axios";
 import {Graph} from "../organisms/layout/Graph"
 
 export const ShowGraph = (props) => {
-	const {prefectures, setPrefectures, index, setIndex} = props;
+	const {index} = props;
 	const [population, setpopulation] = useState(null);
-	let series = [];
 	// APIから人口の情報を取得する
 	useEffect(() => {
 		axios
@@ -25,9 +24,10 @@ export const ShowGraph = (props) => {
 		});
 	}, [index])
 	const data = population;
-	const demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
 
 	return (
-		<Graph data={data} />
+		<>
+			<Graph data={data} />
+		</>
 	  );
 }

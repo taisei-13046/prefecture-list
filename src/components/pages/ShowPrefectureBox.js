@@ -6,8 +6,8 @@ import {prefecturesList} from "../../prefectureData";
 import {PrefectureAndButton} from "../molecules/PrefectureAndButton";
 
 export const ShowPrefectureBox = (props) => {
-	const {prefectures, setPrefectures, index, setIndex} = props;
-	const [checked, setChecked] = useState(false);
+	const {prefectures, setPrefectures, setIndex} = props;
+
 	//APIから都道府県一覧を取得する
 	useEffect(() => {
 		axios
@@ -30,7 +30,7 @@ export const ShowPrefectureBox = (props) => {
 					}
 					return (
 						<Sdiv name="form" >
-							<input type="radio" onChange={onChangeIndex} name="checked" class="checked" />
+							<input type="radio" onChange={onChangeIndex} name="checked" />
 							<Sspan>{prefecture.prefName}</Sspan>
 						</Sdiv>
 					)
