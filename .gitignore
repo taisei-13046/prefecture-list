@@ -25,3 +25,6 @@ yarn-error.log*
 /src/populationData.js
 /src/prefectureData.js
 /src/APIkey.js
+/.firebaserc
+/firebase.json
+/.firebase
