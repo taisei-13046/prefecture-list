@@ -9,5 +9,5 @@
 Hosting URL: https://prefecture-list.web.app
 
 ## API
-RESAS API: https://opendata.resas-portal.go.jp/
+RESAS API: https://opendata.resas-portal.go.jp/  
 Recharts: https://recharts.org/en-US/
