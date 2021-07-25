@@ -28,7 +28,9 @@ export const ShowGraph = (props) => {
 
 	return (
 		<>
-			<Graph data={data} />
+			<div style={{ width: '100%', height: '300px' }}>
+				<Graph data={data} />
+			</div>
 		</>
 	  );
 }

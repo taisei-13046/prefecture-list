@@ -4,6 +4,7 @@ export const Graph = (props) => {
 	const {data} = props;
 	return (
 		<>
+		<ResponsiveContainer>
 		<LineChart
 		width={1000}
 		height={300}
@@ -27,6 +28,7 @@ export const Graph = (props) => {
 			activeDot={{ r: 8 }}
 		/>
 		</LineChart>
+		</ResponsiveContainer>
 		</>
 	)
 }
